@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Pushster&family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pushster', cursive;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .cigarette {
+    transform-style: preserve-3d;
+    animation: animate 15s infinite;
+}
+@keyframes animate{
+    0% {
+            transform: perspective(1000px) rotateY(0deg) rotateZ(0deg) rotateX(0deg);
+        }
+    
+        100% {
+            transform: perspective(1000px) rotateY(360deg) rotateZ(-360deg) rotateX(360deg);
+        }
+    }
+
+.container .cigarette span {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 2em;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    transform: translate(-50%, -50%) rotateX(calc(var(--i)
+    *60deg)) translateZ(100px);
+}
+.container .cigarette span i{
+    font-style: normal;
+    color: yellow;
+}
+.container .cigarette span i2 {
+    font-style: normal;
+    color: red;
+}
+
